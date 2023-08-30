@@ -7,19 +7,19 @@
   
   <title>为笔记软件&#34;黑曜石&#34;（Obsidian）开发一个密码保护插件 | 紫去秋来的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#黑曜石 #Obsidian #密码 #加密 #保护 #password #protect  一个 Obsidian 的密码保护插件目的我开发这个插件的目的是：防止我的女朋友偷看我的私人笔记或日记。   这个插件做了什么？这个插件不会加密和解密你的笔记，也不会修改你的笔记，它不会对你的笔记做任何事。   当你每次启动 Obsidian: 如果你设置的受保护路径是根路径（&#x2F;），你将会看到一个密码验证">
+  <meta name="description" content="#黑曜石 #Obsidian #密码 #加密 #保护 #password #protect  一个 Obsidian 的密码保护插件目的我开发这个插件的目的是，防止我的女朋友偷看我的私人笔记或日记。   这个插件做了什么？这个插件不会加密和解密你的笔记，也不会修改你的笔记，它不会对你的笔记做任何事，只会用弹出密码验证框的形式锁定Obsidian。   当你每次启动 Obsidian: 如果你设置的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为笔记软件&quot;黑曜石&quot;（Obsidian）开发一个密码保护插件">
 <meta property="og:url" content="http://qing3962.github.io/2023/05/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="紫去秋来的博客">
-<meta property="og:description" content="#黑曜石 #Obsidian #密码 #加密 #保护 #password #protect  一个 Obsidian 的密码保护插件目的我开发这个插件的目的是：防止我的女朋友偷看我的私人笔记或日记。   这个插件做了什么？这个插件不会加密和解密你的笔记，也不会修改你的笔记，它不会对你的笔记做任何事。   当你每次启动 Obsidian: 如果你设置的受保护路径是根路径（&#x2F;），你将会看到一个密码验证">
+<meta property="og:description" content="#黑曜石 #Obsidian #密码 #加密 #保护 #password #protect  一个 Obsidian 的密码保护插件目的我开发这个插件的目的是，防止我的女朋友偷看我的私人笔记或日记。   这个插件做了什么？这个插件不会加密和解密你的笔记，也不会修改你的笔记，它不会对你的笔记做任何事，只会用弹出密码验证框的形式锁定Obsidian。   当你每次启动 Obsidian: 如果你设置的">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=$%5B%22obsidian-password%22%5D.downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json">
+<meta property="og:image" content="https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=$%5B%22password-protection%22%5D.downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json">
 <meta property="article:published_time" content="2023-05-15T07:14:43.000Z">
-<meta property="article:modified_time" content="2023-07-27T02:08:42.182Z">
+<meta property="article:modified_time" content="2023-08-30T14:31:43.447Z">
 <meta property="article:author" content="Qing Li">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=$%5B%22obsidian-password%22%5D.downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json">
+<meta name="twitter:image" content="https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=$%5B%22password-protection%22%5D.downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json">
   
     <link rel="alternate" href="/atom.xml" title="紫去秋来的博客" type="application/atom+xml">
   
@@ -92,17 +92,27 @@
       
         <p>#黑曜石 #Obsidian #密码 #加密 #保护 #password #protect</p>
 <hr>
-<h1 id="一个-Obsidian-的密码保护插件"><a href="#一个-Obsidian-的密码保护插件" class="headerlink" title="一个 Obsidian 的密码保护插件"></a>一个 Obsidian 的密码保护插件</h1><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>我开发这个插件的目的是：防止我的女朋友偷看我的私人笔记或日记。  </p>
-<h2 id="这个插件做了什么？"><a href="#这个插件做了什么？" class="headerlink" title="这个插件做了什么？"></a>这个插件做了什么？</h2><p>这个插件不会加密和解密你的笔记，也不会修改你的笔记，它不会对你的笔记做任何事。  </p>
+<h1 id="一个-Obsidian-的密码保护插件"><a href="#一个-Obsidian-的密码保护插件" class="headerlink" title="一个 Obsidian 的密码保护插件"></a>一个 Obsidian 的密码保护插件</h1><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>我开发这个插件的目的是，防止我的女朋友偷看我的私人笔记或日记。  </p>
+<h2 id="这个插件做了什么？"><a href="#这个插件做了什么？" class="headerlink" title="这个插件做了什么？"></a>这个插件做了什么？</h2><p>这个插件不会加密和解密你的笔记，也不会修改你的笔记，它不会对你的笔记做任何事，只会用弹出密码验证框的形式锁定Obsidian。  </p>
 <p>当你每次启动 Obsidian:</p>
 <p>如果你设置的受保护路径是根路径（/），你将会看到一个密码验证框，只有输入正确的密码，你才能打开任何一篇笔记。  </p>
 <p>如果你设置的受保护路径是子路径（/xxx），当你要打开的笔记位于这个子路径，就会弹出一个密码验证框，只有输入正确的密码，你才能继续打开这篇笔记。  </p>
 <p>一旦输入过一次正确的密码，那么再打开其他受保护的笔记时，不会要求再次输入。  </p>
 <p>如果你想再次开启保护，可以调出命令面板，输入“pass”，找到命令 - “Password Protection: 打开密码保护”，执行它，那么再要打开受保护的笔记，会再次弹出密码验证框。  </p>
 <p>在 Windows 版的 Obsidian 里，左侧的工具栏会出现一个密码保护按钮，点击它也可以执行保护或不保护动作。  </p>
-<h2 id="已测试的系统"><a href="#已测试的系统" class="headerlink" title="已测试的系统"></a>已测试的系统</h2><p>这个插件已经在 Windows 和 iOS (iPhone、iPad) 系统上通过测试，使用2023年5月下载的 Obsidian。</p>
-<h2 id="安装、配置和使用"><a href="#安装、配置和使用" class="headerlink" title="安装、配置和使用"></a>安装、配置和使用</h2><ol>
-<li><p>下载这个插件的最新 Release 版本: password-protection-1.x.x.zip，这个包可以跨平台使用，已经在 Windows 和 iOS 上完成测试； <a target="_blank" rel="noopener" href="https://github.com/qing3962/password-protection/releases">下载地址</a></p>
+<h2 id="新功能"><a href="#新功能" class="headerlink" title="新功能"></a>新功能</h2><ul>
+<li>版本: 1.1.12 (2023.8.16)</li>
+</ul>
+<ol>
+<li><p>增加自动打开密码保护的间隔时间设置，单位：分钟。如果设置的时间大于0，当距离上次关闭密码保护或上次打开一个被保护的文件，过去了设置的时间，插件将自动再次打开密码保护，如果用户再次打开一个受保护的文件，将弹出密码验证框验证密码。  </p>
+</li>
+<li><p>增加禁止关闭密码验证框的选项，这将提供更多的保护。如果打开这个开关，密码验证框弹出后将不能被关闭。当你设置的保护目录是根目录，如果你忘记密码，你将有可能进不了Obsidian，因为这种情况下，Obsidian 启动时将弹出密码验证框，而且无法直接关闭。  </p>
+</li>
+</ol>
+<h2 id="已测试的系统"><a href="#已测试的系统" class="headerlink" title="已测试的系统"></a>已测试的系统</h2><p>这个插件已经在 Windows 和 iOS (iPhone、iPad) 系统上通过测试，使用2023年5月下载的 Obsidian。  </p>
+<h2 id="安装、配置和使用"><a href="#安装、配置和使用" class="headerlink" title="安装、配置和使用"></a>安装、配置和使用</h2><p>如果你不能从社区插件市场安装这个插件，你可以用下面的方法：</p>
+<ol>
+<li><p>下载这个插件的最新 Release 版本: password-protection-1.x.x.zip，这个包可以跨平台使用，已经在 Windows 和 iOS 上完成测试； <a target="_blank" rel="noopener" href="https://github.com/qing3962/password-protection/releases">GitHub</a><br><a target="_blank" rel="noopener" href="https://gitee.com/qing3962/password-protection/">Gitee</a></p>
 </li>
 <li><p>找到你的 Obsidian 配置文件夹的插件文件夹：plugins，一般在你的笔记库所在的目录：.obsidian/plugins；</p>
 </li>
@@ -117,18 +127,32 @@
 <li><p>当你打开一个位于保护路径下的笔记，将弹出密码验证弹窗，只有输入正确的密码，你才能继续打开笔记。  </p>
 </li>
 </ol>
+<h2 id="贡献和帮助"><a href="#贡献和帮助" class="headerlink" title="贡献和帮助"></a>贡献和帮助</h2><p>欢迎你对这个插件做出贡献!  </p>
+<ol>
+<li>如果你发现任何 Bug 或者有任何建议，请<a target="_blank" rel="noopener" href="https://github.com/qing3962/password-protection/issues">创建一个 issue 在 GitHub</a>，或者 fork 代码仓库修改后提交一个 pull request，或者发送邮件给我：<a href="mailto:&#113;&#x69;&#110;&#x67;&#51;&#57;&#x36;&#50;&#x40;&#115;&#105;&#110;&#x61;&#46;&#99;&#x6f;&#109;">&#113;&#x69;&#110;&#x67;&#51;&#57;&#x36;&#50;&#x40;&#115;&#105;&#110;&#x61;&#46;&#99;&#x6f;&#109;</a>.  </li>
+</ol>
 <h2 id="许可证"><a href="#许可证" class="headerlink" title="许可证"></a>许可证</h2><p>本插件使用 MIT 许可证。 <a href="LICENSE">MIT License</a></p>
 <hr>
-<h1 id="Password-Protection-Plugin-for-Obsidian"><a href="#Password-Protection-Plugin-for-Obsidian" class="headerlink" title="Password Protection Plugin for Obsidian"></a>Password Protection Plugin for Obsidian</h1><h2 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h2><p>I developed this plugin to prevent my girlfriend from peeking my private notes or diaries.  </p>
-<h2 id="What-does-this-plugin-do"><a href="#What-does-this-plugin-do" class="headerlink" title="What does this plugin do?"></a>What does this plugin do?</h2><p>No encrypt, no decrypt, This plugin doesn’t modify your notes, it will not do anything with your notes.  </p>
+<h1 id="Password-Protection-Plugin"><a href="#Password-Protection-Plugin" class="headerlink" title="Password Protection Plugin"></a>Password Protection Plugin</h1><h2 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h2><p>I developed this plugin to prevent my girl-friend from peeking my private notes or diaries.  </p>
+<h2 id="What-does-this-plugin-do"><a href="#What-does-this-plugin-do" class="headerlink" title="What does this plugin do?"></a>What does this plugin do?</h2><p>No encrypt, no decrypt, This plugin doesn’t modify your notes, it will not do anything with your notes, only lock the obsidian.  </p>
 <p>When you launch the Obsidian:</p>
 <p>If the protected folder you set is the root folder (/), a password verification box will present, enter the correct password, you can just open a note.  </p>
 <p>If the protected folder you set is a sub-folder (/xxx), when you open a note that located in the sub-folder, a password verification box will pop up, enter the correct password, you can open the note.  </p>
 <p>Once you have entered the correct password, you will not be asked to enter it again when opening other protected notes.  </p>
-<p>If you want to turn on protection again, you may invoke the command panel, type “pass”, find the command - “Password Protection: Open”, run it, when you open a protected note, the password verification box will pop up again.  </p>
-<p>In Obsidian for Windows, a Password Protection Button locates on the left-bar. Click on it to execute protecting or unprotecting action.  </p>
+<p>If you want to lock password protection again, you may invoke the command panel, type “pass”, find the command - “Password Protection: Lock”, run it, when you open a protected note, the password verification box will pop up again.  </p>
+<p>In Obsidian for Windows, a Password Protection Button locates on the left-bar. Click on it to execute locking or unlocking action.  </p>
+<h2 id="New-feature"><a href="#New-feature" class="headerlink" title="New feature"></a>New feature</h2><ul>
+<li>version: 1.1.12 (8/16/2023)</li>
+</ul>
+<ol>
+<li><p>Add the interval setting of Auto-lock password protection. If you set a value greater than 0, when time elapse certain minutes from last unlocked protection or last opened a protected file，the password verify box will pop up again as soon as you open a new protected file.  </p>
+</li>
+<li><p>Add the switch setting of prohibit close password verify box, this will provide more protection. If you enable the setting option, the password verify box wouldn’t be able to be closed as soon as it pop up, unless you type right password. Caution: If the protected folder you set is root path (/),  and you forgot your password, you may not be able to enter the Obsidian, because in this case, when the Obsidian launching, a password verification box will pop up and cannot be directly closed.  </p>
+</li>
+</ol>
 <h2 id="The-systems-have-been-tested"><a href="#The-systems-have-been-tested" class="headerlink" title="The systems have been tested:"></a>The systems have been tested:</h2><p>I have tested the plugin on Windows and iOS (iPhone、iPad) with Obsidian in 2023.5.</p>
-<h2 id="Installation-Configruation-and-Usage"><a href="#Installation-Configruation-and-Usage" class="headerlink" title="Installation, Configruation, and Usage"></a>Installation, Configruation, and Usage</h2><ol>
+<h2 id="Installation-Configruation-and-Usage"><a href="#Installation-Configruation-and-Usage" class="headerlink" title="Installation, Configruation, and Usage"></a>Installation, Configruation, and Usage</h2><p>If you cann’t install the plugin from community plugin market, you can step by step follow this:</p>
+<ol>
 <li><p>Download the latest release: password-protection-1.x.x.zip, this package in cross-platform have been tested in Windows and iOS; <a target="_blank" rel="noopener" href="https://github.com/qing3962/password-protection/releases">Download</a>.</p>
 </li>
 <li><p>Open the folder for community plugins of Obsidian, usually locate in .obsidian/plugins of the your vault folder.</p>
@@ -144,9 +168,16 @@
 <li><p>the password protection plugin start work, when you open a note in the protected path you set, a Password Verify Modal will popup, enter the right password, you just open the note.  </p>
 </li>
 </ol>
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>Contributions to the password-protection plugin are welcome!  </p>
+<ol>
+<li><p>If you find any bugs or have any suggestions, please <a target="_blank" rel="noopener" href="https://github.com/qing3962/password-protection/issues">open an issue</a> or submit a pull request.  </p>
+</li>
+<li><p>If you want to display your own native language in the plugin, please refer to the ./langs/en.json file in the source code, create a new language file, and then open an issue attached the file or submit a pull request.  </p>
+</li>
+</ol>
 <h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
 <hr>
-<p><img src="https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=$%5B%22obsidian-password%22%5D.downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json" alt="Obsidian Downloads">  </p>
+<p><img src="https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=downloads&query=$%5B%22password-protection%22%5D.downloads&url=https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/community-plugin-stats.json" alt="Obsidian Downloads">  </p>
 <hr>
 <p><a target="_blank" rel="noopener" href="https://bmc.link/qing3962">Buy me a coffee?</a>  </p>
 
@@ -160,20 +191,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2023/07/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
   
 </article>
 
@@ -193,7 +210,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
     </div>
   </div>
 
@@ -204,10 +221,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2023/07/21/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/2023/05/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">为笔记软件&#34;黑曜石&#34;（Obsidian）开发一个密码保护插件</a>
